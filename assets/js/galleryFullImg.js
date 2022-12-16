@@ -6,6 +6,9 @@ function fullSize(image){
     img.src = image;
 }
 function fullSizeClose(){
+    setTimeout(ok,100)
+}
+function ok(){
     imgBox.style.opacity = 0;
     setTimeout(okok,200)
 }
