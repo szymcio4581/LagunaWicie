@@ -1,3 +1,3 @@
 # LagunaWicie
-stronka dla dominiczka kc 
+Stronka dla dominiczka kc <br/>
 Pierwszy większy projekt :>
