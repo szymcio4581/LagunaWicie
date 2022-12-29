@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/gallery.css">
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <div class="background"></div>
@@ -51,23 +52,23 @@
         <p class="footerRItem">Backend: <a class="footerRLink" href="https://g-script.xyz">Dominik Chudyka</a></p>
     </div>
 </div>
-<div data-aos="fadeIn" data-aos-duration="700" id="alert" class="alert">
+<div id="alert" class="alert">
     <div class="alertContent">
-        <p>Uwaga! Niestety, Nie Posiadamy Już Wolnych Domków W Tym Sezonie Zapraszamy Za Rok!</p>
+        <p style="margin: 0;">Uwaga! Niestety, Nie Posiadamy Już Wolnych Domków W Tym Sezonie Zapraszamy Za Rok!</p>
     </div>
     <div class="alertClose" onclick="closing()">
         <p id="close">x</p>
     </div>
 </div>
-<div class="nav">
-    <div class="animated fadeInLeft navLogo">
+<div class="flex nav">
+    <div class="navLogo">
         <a href="index.html"><img id="logo" src="assets/images/logo.png" alt="logo XD"></a>
     </div>
-    <div class="animated fadeInRight navButtons">
+    <div class="navButtons">
         <a id="home" href="index.html">Główna</a>
-        <a id="aboutHref" href="index.html#about">O nas</a>
-        <a id="gallery" href="#">Galeria</a>
-        <button id="reservation" onclick="window.location = 'booking.html'">Rezerwacja</button>
+        <a id="aboutHref" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">O nas</a>
+        <a id="gallery" href="gallery.html">Galeria</a>
+        <button id="reservation" onclick="document.getElementById('okk').scrollIntoView({behavior: 'smooth'});">Rezerwacja</button>
     </div>
 </div>
 <div class="fullImage" id="fullImageBox" onclick="fullSizeClose()">

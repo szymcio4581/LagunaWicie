@@ -73,7 +73,6 @@ body{
     height: 46px;
     justify-content: center;
     align-items: center;
-    margin-right: 10%;
     color: white;
 
     box-shadow: 0 5px 10px rgba(23, 63, 65, 0.52);
@@ -113,6 +112,7 @@ body{
     line-height: 104.2%;
 }
 #topButtonL{
+    position: relative;
     height: 64px;
     width: 258px;
     border-radius: 50px;
@@ -131,6 +131,7 @@ body{
     box-shadow: 0 0 20px rgb(0, 0, 0);
 }
 #topButtonR{
+    position: relative;
     height: 64px;
     width: 217px;
     border-radius: 50px;
@@ -255,11 +256,11 @@ body{
     background-position: right;
     background-size: auto;
     width: 100%;
-    height: 799px;
+    height: 1000px;
 }
 .topLeftBlur{
     width: 50%;
-    height: 799px;
+    height: 900px;
     left: 0;
     top: 0;
     display: flex;
@@ -286,6 +287,7 @@ body{
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
 }
 .topButtons{
+    position: relative;
     padding-top: 30px;
     justify-content: flex-start;
 }
@@ -294,7 +296,7 @@ body{
     width: 100%;
     height: 250px;
     left: 0;
-    top: 549px;
+    top: 651px;
     display: flex;
 
     background: linear-gradient(180deg,
@@ -309,13 +311,14 @@ body{
     left: 0;
     width: 100%;
     height: 115px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 15% 85%;
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(8px);
 }
 .navButtons{
-    width: 80%;
     height: 100%;
+    margin-right: 150px;
 
     font-weight: 500;
     font-size: 24px;
@@ -328,10 +331,9 @@ body{
 }
 .navLogo{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     height: 100%;
-    width: 20%;
 }
 .alert{
     position: fixed;
@@ -340,14 +342,12 @@ body{
     left: 0;
     top: 115px;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 97% 3%;
     background: rgba(22, 198, 187, 0.8);
     backdrop-filter: blur(6px);
 }
 .alertContent{
-    width: 97%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -359,10 +359,10 @@ body{
 }
 .alertClose{
     height: 100%;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3%;
 }
 .alertClose:hover{
     cursor: pointer;
@@ -395,7 +395,7 @@ body{
 
 }
 .whyElementAnimate{
-    width: 316px;
+    width: 300px;
     height: 192px;
     border-radius: 20px;
 
@@ -450,16 +450,14 @@ body{
 .locationDetails{
     height: 400px;
     width: 50%;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+    display: grid;
     padding-top: 60px;
 }
 .locationTop{
     height: 50%;
     width: 100%;
 }
-.okdga{
+.locationTopP{
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -469,7 +467,7 @@ body{
 
     color: #FFFFFF;
 }
-.oksgsd{
+.locationTopH{
     font-style: normal;
     font-weight: 600;
     font-size: 58px;
@@ -723,18 +721,16 @@ body{
 }
 .footerLeft{
     height: 100%;
-    width: 50%;
+    width: 70%;
     display: flex;
     align-items: center;
 }
 .footerRight{
     height: 100%;
-    width: 50%;
+    width: 30%;
     padding-right: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+    display: grid;
+    justify-items: end;
 
     font-style: normal;
     font-weight: 500;
@@ -761,7 +757,7 @@ body{
     color: #FFFFFF;
 }
 .footerRItem{
-    margin: 5px;
+    margin: 10px 0 0 0;
 }
 .footerRLink{
     opacity: 0.8;
@@ -813,4 +809,148 @@ body{
     50% { height: 100%;}
     75% { height: 100%;}
     100% { height: 0;}
+}
+@media (max-width: 1260px){
+    .navButtons{
+        margin-right: 20px;
+    }
+    .why{
+        margin-top: -150px;
+    }
+    .whyContent{
+        height: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .whyElement{
+        height: 198px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about{
+        padding: 0 30px;
+    }
+    .actualTerms{
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .termAnimation{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .term{
+        width: 440px;
+        height: 330px;
+    }
+    .location{
+        width: 100%;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+        align-items: center;
+    }
+    .locationDetails{
+        width: 100%;
+        text-align: center;
+    }
+    .mapBackground{
+        width: 95%;
+    }
+    .aboutLeft{
+        display: none;
+    }
+    .aboutRight{
+        width: 100%;
+    }
+}
+@media (max-width: 780px){
+    .footer{
+        display: grid;
+        grid-template-columns: 100%;
+        padding: 0;
+        height: auto;
+    }
+    .footerLeft{
+        height: auto;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .footerRight{
+        padding-right: 0;
+        height: auto;
+        width: 100%;
+        grid-template-columns: 100%;
+        justify-items: center;
+    }
+    .footerButtons{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .footerButton{
+        margin: 5px;
+    }
+}
+@media (max-width: 500px){
+    .whyContent{
+        grid-template-columns: 100%;
+    }
+    .topLeftBlur{
+        width: 80%;
+    }
+    .nav{
+        height: 160px;
+        grid-template-columns: 100%;
+    }
+    .alert{
+        height: 50px;
+        top: 160px;
+        grid-template-columns: 95% 5%;
+    }
+    .navButtons{
+        margin: -15px 15px;
+    }
+    .navLogo{
+        width: 100%;
+        justify-content: center;
+    }
+    .booking{
+        padding: 10px;
+    }
+}
+@media (max-width: 425px) {
+    .navButtons{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .bookingButton{
+        width: 250px;
+    }
+}
+@media (max-width: 400px){
+    .nav{
+        height: 200px;
+    }
+    .alert{
+        top: 200px;
+    }
+    .navButtons{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+    }
+    #okok{
+        font-size: 1.7em;
+    }
+}
+@media (max-width: 321px) {
+    .footerButtons{
+        padding-left: 0;
+    }
 }

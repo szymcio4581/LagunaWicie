@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="assets/css/booking.css">
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <div class="blur"></div>
 <div class="booking">
-    <div>
+    <div class="upHouse">
         <h1 class="hhha">Złóż rezerwację</h1>
         <form action="./" class="form">
-            <div class="okok">
+            <div id="okok1" class="okok">
                 <label class="okLabel" for="dateStart">Od</label>
                 <input onchange="update()" class="ok" type="date" value="2023-06-24" min="2023-06-24" max="2023-08-26" required name="dateStart" id="dateStart">
             </div>
@@ -29,18 +30,20 @@
         </form>
     </div>
     <div class="house">
-        <div class="actualHouse">
-            <div class="houseBlur">
-                <h1 class="houseHeader">Domek letniskowy</h1>
-                <p id="toUpdate" class="houseText">2023-06-24 do 2023-06-24 • 3 gości</p>
+        <div style="width: 535px; margin: 0">
+            <div class="actualHouse">
+                <div class="houseBlur">
+                    <h1 class="houseHeader">Domek letniskowy</h1>
+                    <p id="toUpdate" class="houseText">2023-06-24 do 2023-06-24 • 3 gości</p>
+                </div>
             </div>
-        </div>
-        <div class="houseButton">
-            <div class="houseButtonTextL">
-                <p style="margin: 0">Zarezerwuj teraz</p>
-            </div>
-            <div class="houseButtonTextR">
-                <p  style="margin: 0">0zł</p>
+            <div class="houseButton">
+                <div class="houseButtonTextL">
+                    <p style="margin: 0">Zarezerwuj teraz</p>
+                </div>
+                <div class="houseButtonTextR">
+                    <p  style="margin: 0">0zł</p>
+                </div>
             </div>
         </div>
     </div>
@@ -129,23 +132,23 @@
         <p class="footerRItem">Backend: <a class="footerRLink" href="https://g-script.xyz">Dominik Chudyka</a></p>
     </div>
 </div>
-<div data-aos="fadeIn" data-aos-duration="700" id="alert" class="alert">
+<div id="alert" class="alert">
     <div class="alertContent">
-        <p>Uwaga! Niestety, Nie Posiadamy Już Wolnych Domków W Tym Sezonie Zapraszamy Za Rok!</p>
+        <p style="margin: 0;">Uwaga! Niestety, Nie Posiadamy Już Wolnych Domków W Tym Sezonie Zapraszamy Za Rok!</p>
     </div>
     <div class="alertClose" onclick="closing()">
         <p id="close">x</p>
     </div>
 </div>
-<div class="nav">
-    <div class="animated fadeInLeft navLogo">
+<div class="flex nav">
+    <div class="navLogo">
         <a href="index.html"><img id="logo" src="assets/images/logo.png" alt="logo XD"></a>
     </div>
-    <div class="animated fadeInRight navButtons">
+    <div class="navButtons">
         <a id="home" href="index.html">Główna</a>
-        <a id="aboutHref" href="index.html#about">O nas</a>
+        <a id="aboutHref" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">O nas</a>
         <a id="gallery" href="gallery.html">Galeria</a>
-        <button id="reservation">Rezerwacja</button>
+        <button id="reservation" onclick="document.getElementById('okk').scrollIntoView({behavior: 'smooth'});">Rezerwacja</button>
     </div>
 </div>
 <div id="loader" class="loaderWrapper">
